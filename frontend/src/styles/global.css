@@ -354,31 +354,128 @@ em {
   text-transform: uppercase;
 }
 
+/* ==========================================================================
+   MOBILMENY - AL NAHRAYN (Solid täckning + Mjuk slide-in & slide-out)
+   ========================================================================== */
+
+.mobile-overlay {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #0b0b0b;
+  /* Helt solid mörk bakgrund */
+  color: #ffffff;
+  z-index: 9999;
+  padding: 40px 24px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow-y: auto;
+
+  /* Slide-in från höger */
+  animation: mobileSlideIn 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Slide-out när is-closing aktivt anropas */
+.mobile-overlay.is-closing {
+  animation: mobileSlideOut 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Stängknapp (Stäng ×) med mjuk hover-effekt in och ut */
+.mobile-close {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  font-size: 14px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  cursor: pointer;
+  padding: 8px 12px;
+  z-index: 10000;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), color 0.3s ease;
+}
+
+.mobile-close:hover {
+  color: #d4af37;
+  /* Guldfärg vid hover */
+  transform: scale(1.08) translateX(-2px);
+}
+
+.mobile-close:active {
+  transform: scale(0.95);
+}
+
+/* Länkar och menyinnehåll - Solida bakgrunder så inget släpps igenom */
+.mobile-overlay nav {
+  display: flex;
+  flex-direction: column;
+  margin-top: 60px;
+  background-color: #0b0b0b;
+}
+
 .mobile-overlay nav a {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
-  max-width: 700px;
-  padding: 7px 0;
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(2.5rem, 10vw, 5rem);
-  line-height: 1;
+  align-items: baseline;
+  padding: 16px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 32px;
+  font-weight: 700;
+  background-color: #0b0b0b;
+  /* Förhindrar att bakgrundsbilder syns igenom textraderna */
+  transition: color 0.25s ease, transform 0.25s ease;
+}
+
+.mobile-overlay nav a:hover {
+  color: #d4af37;
+  transform: translateX(6px);
 }
 
 .mobile-overlay nav small {
-  color: var(--gold);
-  font: 600 .6rem Arial, sans-serif;
-  letter-spacing: .2em;
+  font-size: 12px;
+  opacity: 0.5;
 }
 
 .mobile-meta {
   display: flex;
   justify-content: space-between;
-  margin-top: 50px;
+  align-items: center;
   padding-top: 20px;
-  border-top: 1px solid var(--line);
-  color: var(--muted);
-  font-size: .75rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  font-size: 14px;
+  background-color: #0b0b0b;
+}
+
+.mobile-meta a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Keyframes för mjuk öppning & stängning */
+@keyframes mobileSlideIn {
+  from {
+    transform: translateX(100%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes mobileSlideOut {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(100%);
+  }
 }
 
 .hero {

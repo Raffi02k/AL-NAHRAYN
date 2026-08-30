@@ -15,8 +15,18 @@ const links = [
 export default function Header() {
   const { pathname } = useRouter();
   const [open, setOpen] = useState(false);
+  const [isClosing, setIsClosing] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const closeMenu = () => setOpen(false);
+
+  // Mjuk stängning som väntar ut CSS-animationen
+  const closeMenu = () => {
+    if (!open || isClosing) return;
+    setIsClosing(true);
+    setTimeout(() => {
+      setOpen(false);
+      setIsClosing(false);
+    }, 280);
+  };
 
   const handleBrandClick = () => {
     closeMenu();
@@ -75,8 +85,13 @@ export default function Header() {
         </button>
       </div>
       {open && (
-        <div className="mobile-overlay" role="dialog" aria-modal="true" aria-label="Mobilmeny">
-          <button className="mobile-close" type="button" onClick={() => setOpen(false)}>
+        <div
+          className={`mobile-overlay ${isClosing ? "is-closing" : ""}`}
+          role="dialog"
+          aria-modal="true"
+          aria-label="Mobilmeny"
+        >
+          <button className="mobile-close" type="button" onClick={closeMenu}>
             Stäng ×
           </button>
           <nav>
