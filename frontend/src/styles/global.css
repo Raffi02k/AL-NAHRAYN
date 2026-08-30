@@ -253,14 +253,20 @@ em {
   justify-content: flex-end;
 }
 
+/* LÄNKAR (Något större text och tydligare läsbarhet) */
 .desktop-nav>a:not(.header-button) {
   position: relative;
   padding: 10px 0;
-  color: rgba(242, 234, 220, .82);
-  font-size: .64rem;
+  color: rgba(242, 234, 220, .85);
+  font-size: 0.78rem;
+  /* Höjt från 0.64rem för större/tydligare text */
   font-weight: 700;
-  letter-spacing: .17em;
+  letter-spacing: .14em;
+  /* Lite tajtare än tidigare för att passa den större fonten */
   text-transform: uppercase;
+  display: inline-block;
+  transition: color 0.25s ease, transform 0.25s var(--ease);
+  will-change: transform;
 }
 
 .desktop-nav>a:not(.header-button)::after {
@@ -269,9 +275,14 @@ em {
   left: 0;
   right: 100%;
   bottom: 4px;
-  height: 1px;
+  height: 1.5px;
   background: var(--gold);
-  transition: right .3s;
+  transition: right 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.desktop-nav>a:hover {
+  color: var(--gold-light);
+  transform: translateY(-2px);
 }
 
 .desktop-nav>a:hover::after,
@@ -279,9 +290,27 @@ em {
   right: 0;
 }
 
+.desktop-nav>a.active {
+  color: var(--gold-light);
+}
+
+/* LOGOTYP (Enbart ren skala och mjuk guld-glow vid hover) */
 .brand {
   text-align: center;
   line-height: 1;
+  text-decoration: none;
+  display: inline-block;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), filter 0.25s ease;
+  will-change: transform;
+}
+
+.brand:hover {
+  transform: scale(1.04);
+  filter: drop-shadow(0 0 8px rgba(212, 175, 55, 0.35));
+}
+
+.brand:active {
+  transform: scale(0.97);
 }
 
 .brand-name {
@@ -300,6 +329,7 @@ em {
   letter-spacing: .08em;
 }
 
+/* CTA KNAPP ("Ring oss") */
 .header-button {
   min-height: 40px;
   display: inline-flex;
@@ -307,11 +337,32 @@ em {
   padding: 0 18px;
   background: var(--gold);
   border-radius: 999px;
-  color: var(--ink);
+  color: var(--ink) !important;
+  /* Låser textfärgen så den inte försvinner */
   font-size: .62rem;
   font-weight: 800;
   letter-spacing: .17em;
   text-transform: uppercase;
+  text-decoration: none;
+  transition: transform 0.25s var(--ease), background 0.25s ease, box-shadow 0.25s ease;
+  will-change: transform;
+}
+
+/* Hindra att understrecket från vanliga länkar hamnar på knappen */
+.header-button::after {
+  display: none !important;
+}
+
+.header-button:hover {
+  background: var(--gold-light);
+  color: var(--ink) !important;
+  /* Behåller mörk text vid hover */
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 4px 16px rgba(212, 175, 55, 0.35);
+}
+
+.header-button:active {
+  transform: translateY(0) scale(0.97);
 }
 
 .menu-toggle {
