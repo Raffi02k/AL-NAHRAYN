@@ -47,6 +47,16 @@ export default function Footer() {
       </div>
       <div className="shell footer-bottom">
         <span>© 2026 ALNAHRAYN Fisk</span>
+        <a
+          className="footer-credit"
+          href="https://mediamagnet-three.vercel.app"
+          target="_blank"
+          rel="noreferrer"
+          aria-label="Byggd av MediaMagnet"
+        >
+          <span>Byggd av</span>
+          <img src="/images/mediamagnet_logo_with_text_vit.png" alt="MediaMagnet" />
+        </a>
         <span>Irakisk fiskrestaurang i Göteborg</span>
       </div>
     </footer>
