@@ -152,7 +152,7 @@ export default function HomePage() {
           <div>
             <p className="eyebrow">Välkommen till Gunnilse</p>
             <h2>Kom hungrig. Lämna som familj.</h2>
-            <p className="lead">Ring gärna i förväg om du vill beställa Masgouf – den långsamma tillagningen är en del av upplevelsen.</p>
+            <p className="lead">Ring gärna i förväg om du vill beställa Masgouf den långsamma tillagningen är en del av upplevelsen.</p>
             <div className="visit-details">
               <div><span>Adress</span><strong>Långavallsgatan 2B, Gunnilse</strong></div>
               <div><span>Öppettider</span><strong>Tis–sön 11:00–20:00</strong></div>
