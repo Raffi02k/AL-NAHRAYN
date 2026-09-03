@@ -1076,6 +1076,17 @@ em {
 .page-hero-menu .page-hero-bg img {
   filter: blur(1px);
   transform: scale(1.04);
+  animation: menuHeroDrift 15s ease-in-out infinite alternate;
+}
+
+@keyframes menuHeroDrift {
+  from {
+    transform: scale(1.04);
+  }
+
+  to {
+    transform: scale(1.1);
+  }
 }
 
 .page-hero-about .page-hero-bg img {
@@ -1120,6 +1131,21 @@ em {
 .detail-hero>img {
   object-fit: cover;
   object-position: center 57%;
+}
+
+.detail-hero-masgouf>img {
+  object-position: center 48%;
+  animation: masgoufHeroDrift 14s ease-in-out infinite alternate;
+}
+
+@keyframes masgoufHeroDrift {
+  from {
+    transform: scale(1.04);
+  }
+
+  to {
+    transform: scale(1.1);
+  }
 }
 
 .menu-filter-bar {
@@ -1339,6 +1365,20 @@ em {
 
 .editorial-grid .image-frame {
   height: 620px;
+  transition: transform .3s var(--ease), box-shadow .3s var(--ease);
+}
+
+.editorial-grid .image-frame:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 28px 54px rgba(0, 0, 0, .24);
+}
+
+.editorial-grid .image-frame img {
+  transition: transform .4s var(--ease);
+}
+
+.editorial-grid .image-frame:hover img {
+  transform: scale(1.03);
 }
 
 .process-section {
@@ -1356,6 +1396,14 @@ em {
   padding: 30px;
   background: var(--panel);
   border: 1px solid var(--line);
+  transition: transform .3s var(--ease), border-color .3s var(--ease), box-shadow .3s var(--ease), background .3s var(--ease);
+}
+
+.process-grid article:hover {
+  transform: translateY(-6px);
+  background: rgba(24, 20, 16, .96);
+  border-color: rgba(213, 183, 129, .45);
+  box-shadow: 0 24px 44px rgba(0, 0, 0, .22);
 }
 
 .process-grid article>span {
@@ -1578,27 +1626,30 @@ em {
 }
 
 .gallery-item-1,
-.gallery-item-4 {
-  grid-column: span 7;
-}
-
-.gallery-item-2,
-.gallery-item-3,
-.gallery-item-5,
-.gallery-item-6 {
-  grid-column: span 5;
+ .gallery-item-2,
+ .gallery-item-3,
+ .gallery-item-4,
+ .gallery-item-5,
+ .gallery-item-6,
+ .gallery-item-7,
+ .gallery-item-8,
+ .gallery-item-9,
+ .gallery-item-10 {
+  grid-column: span 6;
 }
 
 .gallery-item-1 img,
-.gallery-item-4 img {
-  height: 560px;
-}
-
 .gallery-item-2 img,
 .gallery-item-3 img,
+.gallery-item-4 img,
 .gallery-item-5 img,
-.gallery-item-6 img {
-  height: 420px;
+.gallery-item-6 img,
+.gallery-item-7 img,
+.gallery-item-8 img,
+.gallery-item-9 img,
+.gallery-item-10 img,
+.gallery-item-board img {
+  height: 460px;
 }
 
 .contact-section {
@@ -1644,7 +1695,6 @@ em {
   min-height: 620px;
   overflow: hidden;
   border: 1px solid var(--line);
-  filter: grayscale(1) sepia(.25) brightness(.78);
 }
 
 .map-frame iframe {

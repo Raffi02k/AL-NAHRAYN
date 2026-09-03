@@ -29,7 +29,7 @@ export default function MenuPage() {
   return (
     <main>
       <section className="page-hero page-hero-menu">
-        <div className="page-hero-bg"><img src="/images/menu-board-1.webp" alt="" /></div>
+        <div className="page-hero-bg"><img src="/images/menu-nahrayn-mockup.png" alt="" /></div>
         <div className="page-hero-veil" />
         <div className="shell page-hero-copy"><p className="eyebrow">قائمة الطعام · Vår meny</p><h1>Fisk, eld &amp; generösa fat</h1><p>Välj grillat, friterat eller en mix att dela. Masgouf beställs gärna i förväg.</p></div>
       </section>

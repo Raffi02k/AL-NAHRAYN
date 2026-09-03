@@ -1,13 +1,13 @@
 export const menuCategories = [
   { id: "grillat", title: "Grillad fisk", arabic: "سمك مشوي", image: "/images/fish-plate.webp" },
-  { id: "masgouf", title: "Masgouf", arabic: "مسكوف عراقي", image: "/images/masgouf-fire.webp" },
+  { id: "masgouf", title: "Masgouf", arabic: "مسكوف عراقي", image: "/images/05_grillad_karp_masgouf.png" },
   { id: "skaldjur", title: "Räkor & skaldjur", arabic: "مأكولات بحرية", image: "/images/open-fire.webp" },
 ];
 
 export const featuredDishes = [
   { name: "Grillad guldsparid", arabic: "دنيس مشوي", price: "180 kr", image: "/images/Grillad_Fisk.PNG" },
   { name: "Grillad havsabborre", arabic: "قاروص مشوي", price: "200 kr", image: "/images/Fisk_Ris.PNG" },
-  { name: "Grillad karp (Masgouf)", arabic: "مسكوف", price: "180 kr/kg", image: "/images/Guld_fiske.PNG" },
+  { name: "Grillad karp (Masgouf)", arabic: "مسكوف", price: "180 kr/kg", image: "/images/05_grillad_karp_masgouf.png" },
   { name: "Fiskmix Red Snapper", arabic: "سمك مشكل", price: "400 kr", image: "/images/07_fiskmix_rod_snapper.png" },
   { name: "Grillade räkor", arabic: "روبيان مشوي", price: "180 kr", image: "/images/12_grillade_rakor.png" },
   { name: "Räkor med ris", arabic: "مأكولات بحرية", price: "180 kr", image: "/images/14_rakor_med_ris.png" },
@@ -22,7 +22,7 @@ export const menuSections = [
       ["Grillad guldsparid", "Ris eller pommes med sallad", "180 kr", "/images/Grillad_Fisk.PNG"],
       ["Grillad havsabborre", "För 1 person med ris eller pommes", "200 kr", "/images/Fisk_Burgul.PNG"],
       ["Grillad rödbraxen", "Ris eller pommes och grönsaker", "200 kr", "/images/Fisk_Ris.PNG"],
-      ["Grillad karp (Masgouf)", "+50 kr/person för ris, bröd och sallad", "180 kr/kg", "/images/Guld_fiske.PNG"],
+      ["Grillad karp (Masgouf)", "+50 kr/person för ris, bröd och sallad", "180 kr/kg", "/images/05_grillad_karp_masgouf.png"],
       ["Röd mullet", "Färsk röd mullet grillad över glöd", "300 kr/kg", "/images/06_rod_mullet.png"],
       ["Grillade räkor", "Serveras från grillen med tillbehör", "180 kr", "/images/12_grillade_rakor.png"],
     ],
@@ -54,8 +54,12 @@ export const menuSections = [
 export const gallery = [
   ["/images/chef-masgouf.webp", "Masgouf vid grillen"],
   ["/images/fish-plate.webp", "Grillad fisk med tillbehör"],
+  ["/images/05_grillad_karp_masgouf.png", "Masgouf serverad som hel grillad karp"],
+  ["/images/Grillad_Fisk.PNG", "Grillad fisk från menyn"],
+  ["/images/12_grillade_rakor.png", "Grillade rakor"],
+  ["/images/07_fiskmix_rod_snapper.png", "Fiskmix Red Snapper"],
+  ["/images/menu-board-1-new.png", "ALNAHRAYN Fisks menytavla"],
+  ["/images/menu-board-2-new.png", "ALNAHRAYN Fisks menytavla"],
   ["/images/open-fire.webp", "Öppen eld"],
   ["/images/restaurant-menu.webp", "Menyn i restaurangen"],
-  ["/images/masgouf-fire.webp", "Fisk nära elden"],
-  ["/images/menu-board.webp", "ALNAHRAYN Fisks meny"],
 ];

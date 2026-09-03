@@ -25,7 +25,7 @@ export default function HomePage() {
           </div>
           <div className="hero-side">
             <p>
-              Masgouf, färsk fisk och generösa smaker – tillagat långsamt med eld, rök och irakisk gästfrihet.
+              Masgouf, färsk fisk och generösa smaker tillagat långsamt med eld, rök och irakisk gästfrihet.
             </p>
             <div className="button-row">
               <AppLink className="button button-solid" href="/meny">
@@ -96,7 +96,7 @@ export default function HomePage() {
       </section>
 
       <section className="masgouf-feature">
-        <img src="/images/masgouf-fire.webp" alt="Fisk grillas nära öppen eld" loading="lazy" decoding="async" />
+        <img src="/images/05_grillad_karp_masgouf.png" alt="Masgouf serverad som hel grillad karp" loading="lazy" decoding="async" />
         <div className="masgouf-overlay" />
         <div className="shell masgouf-feature-copy">
           <p className="eyebrow">01 — Iraks nationalrätt</p>
