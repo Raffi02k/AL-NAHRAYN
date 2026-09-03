@@ -92,7 +92,7 @@ export default function MenuPage() {
 
       <section className="section menu-board-section">
         <div className="shell section-heading centered"><p className="eyebrow">Menyöversikt</p><h2>Hela menyn på två tavlor</h2></div>
-        <div className="shell menu-board-grid"><img src="/images/menu-board-1.webp" alt="ALNAHRAYN Fisks menytavla sida ett" loading="lazy" decoding="async" /><img src="/images/menu-board-2.webp" alt="ALNAHRAYN Fisks menytavla sida två" loading="lazy" decoding="async" /></div>
+        <div className="shell menu-board-grid"><img src="/images/menu-board-1-new.png" alt="ALNAHRAYN Fisks menytavla sida ett" loading="lazy" decoding="async" /><img src="/images/menu-board-2-new.png" alt="ALNAHRAYN Fisks menytavla sida två" loading="lazy" decoding="async" /></div>
       </section>
 
       <section className="section callout"><div className="shell callout-inner"><div><p className="eyebrow">Iraks nationalrätt</p><h2>Nyfiken på Masgouf?</h2></div><AppLink className="button" href="/masgouf">Läs om tillagningen</AppLink></div></section>

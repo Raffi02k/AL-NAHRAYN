@@ -1293,6 +1293,13 @@ em {
 .menu-board-grid img {
   width: 100%;
   border: 1px solid var(--line);
+  transition: transform .3s var(--ease), box-shadow .3s var(--ease), border-color .3s var(--ease);
+}
+
+.menu-board-grid img:hover {
+  transform: translateY(-4px) scale(1.01);
+  border-color: rgba(213, 183, 129, .45);
+  box-shadow: 0 22px 42px rgba(0, 0, 0, .28);
 }
 
 .callout {
