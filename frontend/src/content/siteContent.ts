@@ -1,7 +1,7 @@
 export const menuCategories = [
-  { id: "grillat", title: "Grillad fisk", arabic: "سمك مشوي", image: "/images/fish-plate.webp" },
+  { id: "grillat", title: "Grillad fisk", arabic: "سمك مشوي", image: "/images/open-fire.webp" },
   { id: "masgouf", title: "Masgouf", arabic: "مسكوف عراقي", image: "/images/05_grillad_karp_masgouf.png" },
-  { id: "skaldjur", title: "Räkor & skaldjur", arabic: "مأكولات بحرية", image: "/images/open-fire.webp" },
+  { id: "skaldjur", title: "Räkor & skaldjur", arabic: "مأكولات بحرية", image: "/images/13_friterade_rakor.png" },
 ];
 
 export const featuredDishes = [

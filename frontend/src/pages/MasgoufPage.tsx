@@ -4,7 +4,7 @@ export default function MasgoufPage() {
       <section className="detail-hero detail-hero-masgouf">
         <img src="/images/05_grillad_karp_masgouf.png" alt="Masgouf serverad som hel grillad karp" />
         <div className="page-hero-veil" />
-        <div className="shell detail-hero-copy"><p className="eyebrow">مسكوف عراقي · Öppen eld</p><h1>Masgouf</h1><p>Iraks nationalrätt en långsam ritual av fisk, glöd och tålamod.</p></div>
+        <div className="shell detail-hero-copy"><p className="eyebrow">مسكوف عراقي · Öppen eld</p><h1>Masgouf</h1><p>Irakis nationalrätt en långsam ritual av fisk, glöd och tålamod.</p></div>
       </section>
 
       <section className="section">
