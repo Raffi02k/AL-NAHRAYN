@@ -49,7 +49,7 @@ export default function Footer() {
         <span>© 2026 ALNAHRAYN Fisk</span>
         <a
           className="footer-credit"
-          href="https://mediamagnet-three.vercel.app"
+          href="https://www.mediamagnet.se"
           target="_blank"
           rel="noreferrer"
           aria-label="Byggd av MediaMagnet"
